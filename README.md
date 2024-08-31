@@ -176,7 +176,7 @@ There is none development tools, only runs already compiled programs.
 
 **JDK** has **JRE**, and the **JRE** has **JVM**.
 
-# Questions ?
+# Questions
 
 ### Can you mention the main classes implementing the list interface ?
 
