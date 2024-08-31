@@ -1,11 +1,27 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.IntSummaryStatistics;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("Alice", 25);
+        map.put("Bob", 30);
+        map.put("Charlie", 35);
 
+        // Acessando um valor pela chave
+        int age = map.get("Alice");
+        System.out.println("Idade de Alice: " + age);
+
+        // Verificando se uma chave existe
+        boolean hasBob = map.containsKey("Bob");
+        System.out.println("Contém Bob? " + hasBob);
+
+        // Removendo um par chave-valor
+        map.remove("Charlie");
+
+        // Iterando sobre as chaves
+        for (String key : map.keySet()) {
+            System.out.println(key + ": " + map.get(key));
+        }
     }
 
     public static void reverseHello() {
