@@ -274,3 +274,45 @@ It works as local proxy to object remote. Skeleton is deprecated.<br/>
 ### Why is a string length accurate?
 The length of a string in Java is precise because strings are immutable, the length is stored internally, 
 and the length() method directly returns the number of char elements, ensuring efficiency and consistency.
+
+
+# Spring boot
+
+**@RestController**: Used to mark a class as a controller in the Spring MVC (Model-View-Controller) pattern.<br/>
+**@RequestMapping**: Specifies the URL that a controller method will handle.<br/>
+**@Autowired**: Used to automatically inject dependencies into a class, allowing you to obtain an instance of a required class without creating it manually.<br/>
+**@Component**: Used to mark a class as a component managed by Spring.<br/>
+**@Service**: Marks a class as a Spring service, usually containing the business logic of the application.<br/>
+**@RestControllerAdvice**: Used to define a global component that handles exceptions thrown by REST controllers.
+
+## Spring JPA
+It's an ORM spring library to manipulate persist data in java applications.
+
+### What's Bean ?
+Are manage objects managed by the Spring IoC container, essential for configuration and dependency injection.
+
+# Scrum
+is an agile project management methodology that focuses on iterative and incremental delivery of customer value.
+
+roles such as **Product Owner**, **Scrum Master** and **Development Team**, artifacts such as **Product Backlog** and **Sprint Backlog**<br/>.
+and events such as **Planning**, **Daily** Scrum, **Review** and **Retrospective**.
+
+# PostgreSQL
+
+## What is the difference between the types of JOINs in SQL?
+JOINs are used to combine records between two tables or more.
+
+**INNER JOIN**: Returns only records that have matches in both tables.<br/>
+**LEFT JOIN**:<br/>
+Returns all records from the left table and corresponding records from the right table.<br/>
+**RIGHT JOIN**: Returns all records from the right table and corresponding records from the left table.<br/>
+**FULL JOIN**: Returns all records when there is a match in one of the tables.<br/>
+
+## Explain how transactions work in PostgreSQL and how to ensure consistency in a failure scenario ?
+A transaction in PostgreSQL is a sequence of SQL operations that are executed as a single logical unit of work.
+
+
+## How would you go about monitoring and optimizing a slow SQL query in PostgreSQL?
+You can use ``VACUUM ANALYZE;`` or ``EXPLAIN ANALYZE`` to see the database performance.<br/>
+You can create index, recreate the queries, change columns.
+

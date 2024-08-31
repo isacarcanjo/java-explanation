@@ -37,4 +37,4 @@ public class Main {
 // funcionamento do Spring Data JPA, incluindo mapeamento de entidades e o uso de repositórios.
 // Reforce conhecimentos sobre consultas SQL, especialmente JOINs, subqueries, e agregações.
 // Entenda o papel de cada membro da equipe dentro do Scrum (Product Owner, Scrum Master, Desenvolvedor).
-//
+// O que são Beans e qual o ciclo de vida deles em uma aplicação Spring?
