@@ -1,318 +1,195 @@
+# O que é Java?
 
-# What's Java ?
+Java é uma linguagem de programação de alto nível, orientada a objetos, criada em 1995 pela Sun Microsystems.
+Foi projetada para ser independente de plataforma, ou seja, pode rodar em qualquer dispositivo utilizando a JVM (Java Virtual Machine).
 
-It's a high-level language object-oriented programming language that was made at 1995 by Sun Microsystems.
-It designed wil be platform-independent that means, It can runs on any device using JVM (Java Virtual Machine).
+## Alguns conceitos relacionados ao Java:
 
+### Programação Orientada a Objetos (OOP):
+Java segue os princípios da OOP, utilizando objetos e classes como meio principal para estruturar e organizar o código.
 
-Some concepts related to Java:
+### Independência de Plataforma:
+Java pode ser executado em qualquer lugar, pois é compilado para bytecode, utilizando a JVM, o que permite sua execução em qualquer dispositivo.
 
-## Object-Oriented programming (OOP):
-Java follows the principles of OOP it uses objects and classes as the primary means to structure and organize the code.
+### Gerenciamento de Memória:
+Java possui gerenciamento automático de memória por meio do coletor de lixo (Garbage Collector), alocando e desalocando memória automaticamente.
 
-## Platform Independence:
-Java can runs anywhere, because is compiled to bytecode, using the JVM, that's you can run any device.
+### Concorrência:
+Java oferece suporte a multithreading, permitindo que os desenvolvedores criem programas que executam múltiplas tarefas simultaneamente.
 
-## Memory Management:
-Java has a automatic memory management using the garbage collector. allocating and deallocating the memory.
+## Sintaxe
 
-## Concurrency:
-Java has a support for multithreading, allowing developers to build programs with multiples tasks simultaneously.
+### Variáveis
+Você pode declarar variáveis em Java de duas formas:
 
-
-
-## Syntax
-
-### Variables
-You can declare two ways of java variable.
-
+```java
+Tipo nomeVariavel = valor;
+var nomeVariavel = valor;
 ```
-Type variableName = value;
-var variableName = value;
-```
-One time defined the type. you never can change the type defined before.
-```
-String name = "Isac";
-name = 10; // Error
+Uma vez definido o tipo, ele não pode ser alterado posteriormente.
 
-var name = "Jose";
-name = 10; // Error
+```java
+String nome = "Isac";
+nome = 10; // Erro
+
+var nome = "Jose";
+nome = 10; // Erro
 ```
 
-### Types
-There are 8 primitives types,
+### Tipos de Dados
+Java possui 8 tipos primitivos.
 
-### Numerics
+#### Numéricos
 
-```
+```java
 byte, short, int, long
 ```
 
-Only thing that change, it's the size. Each type can storage more than other.
+A diferença entre eles é apenas o tamanho e a quantidade de dados que podem armazenar.
 
-### Boolean
-```
-boolean isOkay = true;
-```
-
-### Char
-Can storage only one letter.
-```
-char letter = "A";
-char letter = "AB"; // Error
-
-If you want to storage a string, you can use the classe String.
-
-String name = "ABC"
+#### Booleano
+```java
+boolean estaOK = true;
 ```
 
-### Float point
-Both storage numbers after the comma, but double is more accurate.
-```
-double age = 20.5;
-float age2 = 20.5F; // aways with 'F' in the final.
+#### Caractere
+Armazena apenas um caractere.
+```java
+char letra = 'A';
+char letra = "AB"; // Erro
+
+// Para armazenar strings, use a classe String.
+String nome = "ABC";
 ```
 
-## Conditionals
-Equal as any language.
-
+#### Ponto Flutuante
+Ambos armazenam números com casas decimais, mas `double` é mais preciso.
+```java
+double altura = 20.5;
+float peso = 20.5F; // Sempre adicionar 'F' no final.
 ```
-if () {
-} else if () {
+
+## Condicionais
+A estrutura é similar a outras linguagens:
+```java
+if (condicao) {
+} else if (outraCondicao) {
 } else {
 }
 ```
 
-## Array
+## Arrays
 
-### Defined size
-```
-int[] idades = new int[10]; 
-String[] names = new String[10];
-boolean[] areOk = new boolean[10];
+### Tamanho Definido
+```java
+int[] idades = new int[10];
+String[] nomes = new String[10];
+boolean[] status = new boolean[10];
 
-idades.length // Size
-Or
-
-boolean[] areOk = {true, false, true};
-
-
+int tamanho = idades.length;
 ```
 
-### Dynamic
+Ou com valores iniciais:
+```java
+boolean[] status = {true, false, true};
 ```
-Example:
-ArrayList<type> name = new ArrayList<type>();
 
-ArrayList<Integer> idades = new ArrayList<Integer>();
+### Array Dinâmico
+```java
+ArrayList<Tipo> nomeLista = new ArrayList<>();
+ArrayList<Integer> idades = new ArrayList<>();
 idades.add(10);
 idades.remove(0);
 idades.get(0);
 idades.size();
 ```
 
-## Loops
+## Laços de Repetição
 
-### For
-```
-int idade = 10;
-for (var i = 0; i < idade; i++) {
-    
+### `for`
+```java
+for (int i = 0; i < 10; i++) {
 }
 ```
 
-### While
-```
-int idade = 10;
+### `while`
+```java
 int i = 0;
-while (i < idade) {
+while (i < 10) {
    i++;
 }
 ```
 
-## Casting (Convert types)
+## Conversão de Tipos (Casting)
 
-### Implicit (inplicite)
-```
+### Implícito
+```java
 int idade = 10;
-double idade2 = idade; // correct
+double idade2 = idade; // Correto
 
-idade = idade2; // wrong, because the size
+idade = idade2; // Erro
 ```
 
-### Explicit (èxplicite)
-```
+### Explícito
+```java
 int idade = 10;
 double idade2 = idade;
+idade = (int) idade2; // Correto
+```
 
-idade = (int) idade2; // correct
-
-// Strings
-
+### Strings
+```java
 char letra = 'a';
-String nome = String.valueOf(letra); // 'a' String
-letra = nome.charAt(0); // 'a' char
-String nome = String.valueOf(idade);
-idade2 = Integer.parseInt(nome);
-
+String nome = String.valueOf(letra);
+letra = nome.charAt(0);
+String idadeStr = String.valueOf(idade);
+idade2 = Integer.parseInt(idadeStr);
 ```
 
+## JDK, JVM e JRE
 
-## JDK (Java Development Kit):
+### JDK (Java Development Kit)
+Pacote de ferramentas para desenvolvimento Java, incluindo o JRE, compilador `javac`, depurador `jdb`, entre outros.
 
-It's java dev kit, where contains all necessary tools to build e compile java programs.
-Also it has JRE and compiler 'javac' and debugger 'jdb' and some tools to compile the code.
+### JVM (Java Virtual Machine)
+Executa o bytecode gerado pelo compilador Java e gerencia memória, threads e coleta de lixo.
 
+### JRE (Java Runtime Environment)
+Ambiente de execução para programas Java, contendo a JVM e bibliotecas padrão.
 
-## JVM (Java Virtual Machine)
-It's a virtual machine that's executes bytecode by java compiler.
-It's responsible to convert bytecode and machine code to specific operating system.
-JVM has memory and threads management and garbage collection.
+## Spring Boot
 
+- `@RestController`: Marca uma classe como um controlador REST.
+- `@RequestMapping`: Define a URL de um método controlador.
+- `@Autowired`: Injeta dependências automaticamente.
+- `@Component`: Marca uma classe como componente gerenciado pelo Spring.
+- `@Service`: Define um serviço com regras de negócio.
+- `@RestControllerAdvice`: Manipula exceções globais para controladores REST.
 
-## JRE (Java Runtime Environment)
-It's an java execution environment, that's there is a JVM and default libraries to run java programs.
-There is none development tools, only runs already compiled programs.
+### Spring JPA
+Biblioteca ORM do Spring para persistência de dados.
 
-**JDK** has **JRE**, and the **JRE** has **JVM**.
+## PostgreSQL
 
-# Questions
+### Tipos de JOIN
 
-### Can you mention the main classes implementing the list interface ?
+- **INNER JOIN**: Retorna apenas registros correspondentes em ambas as tabelas.
+- **LEFT JOIN**: Retorna todos os registros da tabela esquerda e correspondentes da direita.
+- **RIGHT JOIN**: Retorna todos os registros da tabela direita e correspondentes da esquerda.
+- **FULL JOIN**: Retorna todos os registros de ambas as tabelas.
 
-There are 4:
+### Monitoramento e Otimização de Consultas SQL
+Utilize `VACUUM ANALYZE;` ou `EXPLAIN ANALYZE;` para verificar a performance.
 
-**ArrayList**: It's array resizable, it's very good to read operations.<br/>
-**LinkedList**: Doubly linked list, it is efficient in insertion and removal operations.<br/>
-**Vector**: It's like ArrayList, but it's synchronized safe to use in multi-threaded.<br/>
-**Stack**: It's Vector subclass that implements a stack (LIFO - Last In, First Out).
+### Transações
+Uma transação é um conjunto de operações SQL executadas como uma unidade lógica.
 
-### What is the difference between systems.out, System.err, and System.in?
-**System.out**: Show the return on the console output.<br/>
-**System.err**: Show the return error message on the error console output.<br/>
-**System.in**: It's used to get the keyboard input.
-```
-Scanner scanner = new Scanner(System.in);
-String input = scanner.nextLine();
-```
+## Scrum
 
-### Syntax on how to create a linked list and a vector in Java?
-```
-LinkedList<String> linkedList = new LinkedList<>();
-linkedList.add("Element 1");
+Metodologia ágil com papéis como **Product Owner**, **Scrum Master** e **Development Team**,
+artefatos como **Product Backlog** e **Sprint Backlog**, e eventos como **Planning**, **Daily Scrum**, **Review** e **Retrospective**.
 
-Vector<Integer> vector = new Vector<>();
-vector.add(1);
-```
+---
 
-### How it works clone ?
-The method clone in java does the object superficial (superfixial) copy,
-it means that make a new object instance, but if the object has another objects in this one, they change.
-
-### Exceptions types in java ?
-There are 2 types, **Checked** and **Unchecked**.
-
-**Checked**: Are the ones we have to deal with try and catch.<br/>
-IOException: Thrown when an I/O error occurs, such as failure to read or write to a file.<br/>
-SQLException: Thrown to indicate an error related to database operations.<br/>
-ClassNotFoundException: Thrown when an application tries to load a class at runtime and cannot find it.<br/>
-FileNotFoundException: Thrown when trying to access a file that does not exist.
-
-**Unchecked**: Are the ones we have not to deal. Happen at execution time.
-<br/>**NullPointerException**, **ArrayIndexOutOfBoundsException**, etc
-
-### Difference between finally and finalize ?
-
-**finally**: Use to in the try catch block, when is called to close connections and release resources.
-**finalize**: It's a method use in the object, Called by garbage collector, before to destroy the object.
-The proposal of this method was to clean resources before the garbage destroy.
-
-
-### Garbage collection can occur in the permanent generation space in JVM ?
-**Garbage Collection (GC)**: It's a process where JVM restore the free memory that is not more used by objects.
-**Permanent Generation (PermGen) Space**: It was a JVM memory space in the **heap** that used to store classes metadata, but after Java 8 changed to Metaspace.
-Before java 8 the Garbage collector has been worked until the memory runs out.
-Generating **OutOfMemoryError** error.
-**Metaspace**: From Java 8 metaspace has been managed out of heap.
-
-### What's heap ?
-Heap is a java area where memory is allocated by JVM. to use dynamic memory.
-
-### Could you explain the life cycle of uh let's say of an applet ?
-Applet it's a small java application that you can put on the web page and will be runs by browser.
-It has 4 methods, **init()**, **start()**, **stop()**, **destroy()**.
-
-### What are the layers okay of a RMI (Remote Method Invocation) active ?
-RMI it's a tool that you can call remote object methods. You have 3 layers.<br/>
-
-**Stub (Ponteiro Local) and Skeleton Layer (Esqueleto - Obsoleto no Java 2)** <br/>
-It works as local proxy to object remote. Skeleton is deprecated.<br/>
-**Remote Reference Layer**: Manage references and calls to remote objects.<br/>
-**Transport Layer**: Make a manage the communication between client and server. Using TCP/IP.
-
-### What is DGC ?
-**DGC (Distributed Garbage Collection)**: It's a tool manage memory has been used in distributed systems' context. Like the RMI.
-
-### How can i synchronize two process in Java?
-
-**Threads Synchronization**: Use **synchronized**, **ReentrantLock**, **Semaphore**, or **CountDownLatch** to synchronize threads inside one process.<br/>
-**Independents synchronization Process**: Use lock files, sockets, RMI or libraries to synchronize.
-
-### What's the trade-off between using an unordered array and using a ordered array?
-
-**Unordered Array**: Prefer it if you need fast insertions and search/remove is not a common operation.<br/>
-**Ordered Array**: Prefer it if fast searching is a priority and you are willing to pay the price for slower insertions and removals.
-
-### Can you explain marshalling and unmarshalling?
-**Marshalling**: It's a process that transform object and easy data structure to send end storage, ex JSON, XML.
-**Unmarshalling**: It's the reverse process.
-
-### When we use Linked List over an ArrayList in Java ?
-**ArrayList**: use when you need to fast index access and use more read than insert and remove.
-**LinkedList**: Use when you need insert and remove frequently, it's common use to queue (kiu) or stack.
-
-### Why is a string length accurate?
-The length of a string in Java is precise because strings are immutable, the length is stored internally, 
-and the length() method directly returns the number of char elements, ensuring efficiency and consistency.
-
-
-# Spring boot
-
-**@RestController**: Used to mark a class as a controller in the Spring MVC (Model-View-Controller) pattern.<br/>
-**@RequestMapping**: Specifies the URL that a controller method will handle.<br/>
-**@Autowired**: Used to automatically inject dependencies into a class, allowing you to obtain an instance of a required class without creating it manually.<br/>
-**@Component**: Used to mark a class as a component managed by Spring.<br/>
-**@Service**: Marks a class as a Spring service, usually containing the business logic of the application.<br/>
-**@RestControllerAdvice**: Used to define a global component that handles exceptions thrown by REST controllers.
-
-## Spring JPA
-It's an ORM spring library to manipulate persist data in java applications.
-
-### What's Bean ?
-Are manage objects managed by the Spring IoC container, essential for configuration and dependency injection.
-
-# Scrum
-is an agile project management methodology that focuses on iterative and incremental delivery of customer value.
-
-roles such as **Product Owner**, **Scrum Master** and **Development Team**, artifacts such as **Product Backlog** and **Sprint Backlog**<br/>.
-and events such as **Planning**, **Daily** Scrum, **Review** and **Retrospective**.
-
-# PostgreSQL
-
-## What is the difference between the types of JOINs in SQL?
-JOINs are used to combine records between two tables or more.
-
-**INNER JOIN**: Returns only records that have matches in both tables.<br/>
-**LEFT JOIN**:<br/>
-Returns all records from the left table and corresponding records from the right table.<br/>
-**RIGHT JOIN**: Returns all records from the right table and corresponding records from the left table.<br/>
-**FULL JOIN**: Returns all records when there is a match in one of the tables.<br/>
-
-## Explain how transactions work in PostgreSQL and how to ensure consistency in a failure scenario ?
-A transaction in PostgreSQL is a sequence of SQL operations that are executed as a single logical unit of work.
-
-
-## How would you go about monitoring and optimizing a slow SQL query in PostgreSQL?
-You can use ``VACUUM ANALYZE;`` or ``EXPLAIN ANALYZE`` to see the database performance.<br/>
-You can create index, recreate the queries, change columns.
+Este documento fornece uma visão geral de Java, Spring Boot, PostgreSQL e Scrum. Se precisar de mais detalhes sobre algum tópico, me avise!
 
